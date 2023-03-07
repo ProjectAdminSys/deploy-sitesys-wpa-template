@@ -8,32 +8,32 @@
     />
     <Field type="hidden" name="_template" value="box" />
     <div class="mb-6">
-      <label class="text-base" for="name">Name:</label>
+      <label class="text-base" for="name">{{ $t('form.name') }}</label>
       <Field
         v-model="name"
         type="text"
         name="name"
         as="input"
         rules="required|minLength:8|maxLength:20"
-        placeholder="Your Name"
+        :placeholder="$t('form.placeholderName')"
         class="border-gray-400/50 dark:bg-extra-dark focus:border-blue-400 w-full rounded border py-2 px-[14px] text-base outline-none focus-visible:shadow-none"
       />
       <ErrorMessage name="name" class="text-red-500" />
     </div>
     <div class="mb-6">
-      <label class="text-base" for="email">Email:</label>
+      <label class="text-base" for="email">{{ $t('form.email') }}</label>
       <Field
         v-model="email"
         name="email"
         as="input"
         rules="required|email|maxLength:60"
-        placeholder="Your Email"
+        :placeholder="$t('form.placeholderEmail')"
         class="border-gray-400/50 dark:bg-extra-dark focus:border-blue-400 w-full rounded border py-2 px-[14px] text-base outline-none focus-visible:shadow-none"
       />
       <ErrorMessage name="email" class="text-red-500" />
     </div>
     <div class="mb-6">
-      <label class="text-base" for="message">Message:</label>
+      <label class="text-base" for="message">{{ $t('form.message') }}</label>
       <Field
         v-model="message"
         type="text"
@@ -41,7 +41,7 @@
         as="textarea"
         rows="6"
         rules="required|minLength:8|maxLength:190"
-        placeholder="Your Name"
+        :placeholder="$t('form.placeholderMessage')"
         class="border-gray-400/50 dark:bg-extra-dark focus:border-blue-400 w-full rounded border py-2 px-[14px] text-base outline-none focus-visible:shadow-none"
       />
       <ErrorMessage name="message" class="text-red-500" />
@@ -52,7 +52,7 @@
         type="submit"
         class="bg-green-600 disabled:bg-slate-400 w-full rounded p-3 text-white transition hover:bg-opacity-90"
       >
-        Send Message
+        {{ $t('form.send') }}
       </button>
     </div>
   </Form>

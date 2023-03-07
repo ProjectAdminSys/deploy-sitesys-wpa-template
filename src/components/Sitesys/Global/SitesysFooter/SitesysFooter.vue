@@ -11,7 +11,7 @@
               <img :src="imgUrl" alt="logo" class="max-w-full" />
             </a>
             <p class="text-gray-400 font-semibold text-sm mb-2">
-              {{ company.description }}
+              {{ $t('footer.description') }}
             </p>
             <!-- Social Media -->
             <div class="mb-16 flex items-center">
@@ -170,7 +170,9 @@
         <!-- Contact -->
         <div class="w-full px-4 sm:w-1/2 lg:w-4/12">
           <div class="mb-10 w-full">
-            <h4 class="text-gray-300 mb-4 text-lg font-semibold">Contact</h4>
+            <h4 class="text-gray-300 mb-4 text-lg font-semibold">
+              {{ $t('footer.contact') }}
+            </h4>
             <ul>
               <li>
                 <p
@@ -192,7 +194,9 @@
         <!-- Address -->
         <div class="w-full px-4 sm:w-1/2 lg:w-4/12">
           <div class="mb-10 w-full">
-            <h4 class="text-gray-300 mb-4 text-lg font-semibold">Address</h4>
+            <h4 class="text-gray-300 mb-4 text-lg font-semibold">
+              {{ $t('footer.address') }}
+            </h4>
             <ul>
               <li>
                 <p
@@ -222,7 +226,7 @@
     </div>
     <div class="flex justify-center mt-12">
       <p class="text-gray-400">
-        All rights reserved by
+        {{ $t('footer.copyright') }}
         <span class="font-bold">@{{ company.company }}</span> 2023
       </p>
     </div>

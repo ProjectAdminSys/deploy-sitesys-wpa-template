@@ -68,7 +68,8 @@
                 ></button>
               </div>
               <!-- Dropdown Button -->
-              <DropdownConfig class="ml-4" />
+              <LanguageSwither class="ml-4" />
+              <DropdownConfig class="ml-1" />
             </div>
           </div>
         </div>
@@ -111,6 +112,8 @@ import SidebarLink from './inc/SidebarLink.vue'
 import { goToTop } from '@/utils/scroll.js'
 import DropdownConfig from './inc/DropdownConfig.vue'
 import { useWindowScroll } from '@vueuse/core'
+import LanguageSwither from '@/components/Sitesys/Global/LanguageSwither/LanguageSwither.vue'
+import { useI18n } from 'vue-i18n'
 
 const { y } = useWindowScroll()
 
@@ -136,11 +139,33 @@ const handleCloseNavbar = () => {
   showMobileMenu.value = true
 }
 
+const { t } = useI18n()
+
 const navigation = ref([
-  { name: 'Home', href: { path: '/', hash: '#home' }, current: false },
-  { name: 'About', href: { path: '/', hash: '#about' }, current: false },
-  { name: 'Photos', href: { path: '/', hash: '#photos' }, current: false },
-  { name: 'Videos', href: { path: '/', hash: '#videos' }, current: false },
-  { name: 'Contact', href: { path: '/', hash: '#contact' }, current: false },
+  {
+    name: t('navbar.home'),
+    href: { path: '/', hash: '#home' },
+    current: false,
+  },
+  {
+    name: t('navbar.about'),
+    href: { path: '/', hash: '#about' },
+    current: false,
+  },
+  {
+    name: t('navbar.photos'),
+    href: { path: '/', hash: '#photos' },
+    current: false,
+  },
+  {
+    name: t('navbar.videos'),
+    href: { path: '/', hash: '#videos' },
+    current: false,
+  },
+  {
+    name: t('navbar.contact'),
+    href: { path: '/', hash: '#contact' },
+    current: false,
+  },
 ])
 </script>

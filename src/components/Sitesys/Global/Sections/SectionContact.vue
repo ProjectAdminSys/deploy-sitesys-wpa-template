@@ -3,17 +3,14 @@
     <div class="container py-24 mx-auto px-4">
       <div class="anim2-scroll">
         <h2 class="trigger2-scroll text-7xl md:text-5xl mb-10 text-center">
-          Contact
+          {{ $t('contact.title') }}
         </h2>
         <div
           class="lg:w-full mx-auto flex flex-wrap justify-center items-center"
         >
           <div class="w-full lg:py-6 mt-6 lg:mt-0">
             <p class="text-base text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-              quisquam optio! Sequi, amet veritatis culpa, hic explicabo eum
-              voluptatem at officiis doloribus atque alias dignissimos ipsa enim
-              suscipit impedit tempore.
+              {{ $t('contact.description') }}
             </p>
           </div>
         </div>

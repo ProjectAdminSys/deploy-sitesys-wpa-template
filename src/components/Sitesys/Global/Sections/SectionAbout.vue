@@ -3,7 +3,7 @@
     <div class="container py-24 mx-auto px-4">
       <div class="anim1-scroll">
         <h2 class="trigger1-scroll text-7xl md:text-5xl mb-10 text-center">
-          About
+          {{ $t('about.title') }}
         </h2>
         <div
           class="lg:w-full mx-auto flex flex-wrap justify-center items-center"
@@ -15,17 +15,10 @@
           />
           <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
             <p class="text-base text-center lg:text-left">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-              quisquam optio! Sequi, amet veritatis culpa, hic explicabo eum
-              voluptatem at officiis doloribus atque alias dignissimos ipsa enim
-              suscipit impedit tempore? Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit. Cumque fugiat earum pariatur facere dolorum aut
-              ex? Blanditiis in autem deleniti repellendus eveniet, dolor libero
-              iusto non, dicta voluptates earum natus? Lorem ipsum dolor sit
-              amet consectetur, adipisicing elit.
+              {{ $t('about.description') }}
               <RouterLink :to="{ name: 'about' }" class="text-blue-600">
-                Learn more...</RouterLink
-              >
+                {{ $t('about.more') }}
+              </RouterLink>
             </p>
           </div>
         </div>
